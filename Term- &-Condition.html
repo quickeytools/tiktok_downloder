@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terms & Conditions - QuickeyTools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px 0;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    
+    h1 {
+      color: #2c3e50;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .last-updated {
+      color: #7f8c8d;
+      font-style: italic;
+      margin-top: 10px;
+    }
+    
+    .intro {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    
+    .terms-section {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+    
+    .section-title {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .allowed-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .allowed-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .allowed-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .allowed-icon {
+      color: #2ecc71;
+      font-weight: bold;
+      font-size: 1.2rem;
+      min-width: 25px;
+    }
+    
+    .prohibited-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .prohibited-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .prohibited-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .prohibited-icon {
+      color: #e74c3c;
+      font-weight: bold;
+      font-size: 1.2rem;
+      min-width: 25px;
+    }
+    
+    .disclaimer-box {
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 20px 0;
+      border-left: 4px solid #f39c12;
+    }
+    
+    .disclaimer-title {
+      color: #e67e22;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .contact-section {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .contact-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    
+    .email-link {
+      color: white;
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-decoration: none;
+      display: inline-block;
+      margin: 15px 0;
+      padding: 12px 25px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+      transition: background 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    .email-link:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .services-mention {
+      background: #e8f4fc;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 15px 0;
+      border-left: 4px solid #3498db;
+    }
+    
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .service-tag {
+      background: #3498db;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eaeaea;
+      color: #7f8c8d;
+    }
+    
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .nav-link {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      background: #f0f7ff;
+    }
+    
+    .agreement-notice {
+      background: #e8f6f3;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center;
+      border-left: 4px solid #1abc9c;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .terms-section {
+        padding: 20px;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .services-list {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Terms & Conditions</h1>
+    <p>QuickeyTools - Usage Guidelines and Legal Terms</p>
+    <p class="last-updated">Last updated: December 2023</p>
+  </header>
+  
+  <section class="intro">
+    <p>By using QuickeyTools—including all services such as tiktok video downloader, tiktok download mp3, download video tiktok, ssstik, sss tiktok, ティックトック保存, descargar videos de tiktok, and others—you agree to the following terms and conditions:</p>
+    
+    <div class="services-mention">
+      <p><strong>Our services include:</strong></p>
+      <div class="services-list">
+        <span class="service-tag">tiktok video downloader</span>
+        <span class="service-tag">tiktok download mp3</span>
+        <span class="service-tag">download video tiktok</span>
+        <span class="service-tag">ssstik</span>
+        <span class="service-tag">sss tiktok</span>
+        <span class="service-tag">ティックトック保存</span>
+        <span class="service-tag">descargar videos de tiktok</span>
+      </div>
+    </div>
+  </section>
+  
+  <section class="terms-section">
+    <h2 class="section-title">✔ Allowed Usage</h2>
+    <p>You may use our tools only to download:</p>
+    <ul class="allowed-list">
+      <li>
+        <span class="allowed-icon">✓</span>
+        <span><strong>Videos you own</strong> - Content that you have created and have rights to</span>
+      </li>
+      <li>
+        <span class="allowed-icon">✓</span>
+        <span><strong>Videos with permission</strong> - Content where you have explicit permission from the copyright holder</span>
+      </li>
+      <li>
+        <span class="allowed-icon">✓</span>
+        <span><strong>Public domain or copyright-free content</strong> - Content that is freely available for public use</span>
+      </li>
+      <li>
+        <span class="allowed-icon">✓</span>
+        <span><strong>TikTok videos for personal and educational use</strong> - Non-commercial, fair use of publicly available content</span>
+      </li>
+    </ul>
+  </section>
+  
+  <section class="terms-section">
+    <h2 class="section-title">❌ Prohibited Usage</h2>
+    <p>You must not:</p>
+    <ul class="prohibited-list">
+      <li>
+        <span class="prohibited-icon">✗</span>
+        <span><strong>Download private or copyrighted content without permission</strong> - Respect intellectual property rights</span>
+      </li>
+      <li>
+        <span class="prohibited-icon">✗</span>
+        <span><strong>Use downloaded videos commercially</strong> - Without proper licensing or permission</span>
+      </li>
+      <li>
+        <span class="prohibited-icon">✗</span>
+        <span><strong>Misuse our tools for illegal purposes</strong> - Including harassment, infringement, or unlawful activities</span>
+      </li>
+      <li>
+        <span class="prohibited-icon">✗</span>
+        <span><strong>Re-upload copyrighted media under your name</strong> - Claiming ownership of content you didn't create</span>
+      </li>
+    </ul>
+  </section>
+  
+  <section class="terms-section">
+    <h2 class="section-title">⚠ Legal Disclaimer</h2>
+    <div class="disclaimer-box">
+      <div class="disclaimer-title">Important Legal Information</div>
+      <p><strong>QuickeyTools is not affiliated with TikTok.</strong> We are an independent service provider.</p>
+      <p>We only provide a tool to process publicly accessible URLs. Users are responsible for ensuring they have proper rights to download and use content.</p>
+      <p>All video, audio, or photo rights belong to their original TikTok creators. We do not claim ownership of any content processed through our tools.</p>
+    </div>
+    
+    <div class="agreement-notice">
+      <p><strong>By using QuickeyTools, you acknowledge that you understand and agree to these terms.</strong></p>
+      <p>Violation of these terms may result in termination of service access.</p>
+    </div>
+  </section>
+  
+  <section class="contact-section">
+    <h2 class="contact-title">📩 Contact for Legal Inquiries</h2>
+    <p>For legal issues, DMCA takedown requests, or copyright concerns:</p>
+    <a href="mailto:quickeytools@gmail.com" class="email-link">quickeytools@gmail.com</a>
+    <p>We respond to legitimate legal inquiries within 48 hours.</p>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 QuickeyTools. All rights reserved.</p>
+    <div class="nav-links">
+      <a href="about-us.html" class="nav-link">About Us</a>
+      <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+      <a href="contact-us.html" class="nav-link">Contact Us</a>
+    </div>
+  </footer>
+</body>
+</html>

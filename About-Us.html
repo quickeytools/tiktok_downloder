@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - QuickeyTools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px 0;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    
+    h1 {
+      color: #2c3e50;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #3498db, #e74c3c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .tagline {
+      color: #7f8c8d;
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .intro {
+      background-color: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+    
+    .intro p {
+      margin-bottom: 20px;
+    }
+    
+    .tools-section {
+      background-color: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+    }
+    
+    .section-title {
+      color: #2c3e50;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    
+    .tool-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #3498db;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    
+    .mission-section {
+      background-color: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .mission-text {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #2c3e50;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e8f4fc 100%);
+    }
+    
+    .global-section {
+      background-color: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+    }
+    
+    .flags-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+    }
+    
+    .flag-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 150px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    
+    .flag-item:hover {
+      transform: scale(1.05);
+    }
+    
+    .flag-text {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .country-name {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+    
+    .benefits-section {
+      background-color: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .benefit-item {
+      padding: 25px 20px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      color: white;
+    }
+    
+    .benefit-item:nth-child(2) {
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+    }
+    
+    .benefit-item:nth-child(3) {
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+    }
+    
+    .benefit-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .benefit-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eaeaea;
+      color: #7f8c8d;
+    }
+    
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    
+    .nav-link {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      background: #f0f7ff;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .flags-container {
+        gap: 10px;
+      }
+      
+      .flag-item {
+        width: 130px;
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About QuickeyTools</h1>
+    <p class="tagline">All-in-One TikTok Video Downloader Platform</p>
+  </header>
+  
+  <section class="intro">
+    <p>Welcome to QuickeyTools, your trusted online platform for downloading TikTok videos, TikTok MP3, TikTok HD, TikTok photo download, and TikTok videos without watermark.</p>
+    <p>We provide fast and secure tools that help millions of users worldwide save their favorite TikTok content quickly and easily.</p>
+  </section>
+  
+  <section class="tools-section">
+    <h2 class="section-title">🛠️ Our Tools</h2>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3>TikTok Video Downloader</h3>
+        <p>Download any TikTok video in high quality</p>
+      </div>
+      <div class="tool-card">
+        <h3>TikTok Video Download HD</h3>
+        <p>Get videos in HD and 4K quality</p>
+      </div>
+      <div class="tool-card">
+        <h3>TikTok Downloader MP3</h3>
+        <p>Extract audio from TikTok videos as MP3</p>
+      </div>
+      <div class="tool-card">
+        <h3>TikTok Without Watermark</h3>
+        <p>Download videos without TikTok watermark</p>
+      </div>
+      <div class="tool-card">
+        <h3>TikTok Photo Download</h3>
+        <p>Save TikTok photos and images</p>
+      </div>
+      <div class="tool-card">
+        <h3>Multi-Platform Support</h3>
+        <p>ssstik, ssstiktok, sss tiktok, sv tiktok, and more</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="mission-section">
+    <h2 class="section-title">🎯 Our Mission</h2>
+    <p class="mission-text">Our mission is to deliver the fastest, easiest, and highest-quality TikTok downloader tools for users around the world.</p>
+  </section>
+  
+  <section class="global-section">
+    <h2 class="section-title">🌍 Global Language Support</h2>
+    <p>We support search terms and users from multiple countries including:</p>
+    
+    <div class="flags-container">
+      <div class="flag-item">
+        <span style="font-size: 2.5rem;">🇯🇵</span>
+        <div class="flag-text">ティックトック保存</div>
+        <div class="country-name">Japan</div>
+      </div>
+      <div class="flag-item">
+        <span style="font-size: 2.5rem;">🇮🇩</span>
+        <div class="flag-text">pengunduh tiktok</div>
+        <div class="country-name">Indonesia</div>
+      </div>
+      <div class="flag-item">
+        <span style="font-size: 2.5rem;">🇪🇸</span>
+        <div class="flag-text">descargar videos de tiktok</div>
+        <div class="country-name">Spanish</div>
+      </div>
+      <div class="flag-item">
+        <span style="font-size: 2.5rem;">🇹🇭</span>
+        <div class="flag-text">ติ๊กต๊อก ดาวน์โหลดวิดีโอ</div>
+        <div class="country-name">Thailand</div>
+      </div>
+      <div class="flag-item">
+        <span style="font-size: 2.5rem;">🇸🇦</span>
+        <div class="flag-text">تحميل تيك توك</div>
+        <div class="country-name">Arabic</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="benefits-section">
+    <h2 class="section-title">✨ Why Choose QuickeyTools?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">🔓</div>
+        <div class="benefit-title">No Login Required</div>
+        <p>Use our tools instantly without creating an account</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">💧</div>
+        <div class="benefit-title">No Watermark</div>
+        <p>Download TikTok videos without the annoying watermark</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">∞</div>
+        <div class="benefit-title">No Limits</div>
+        <p>Download as many videos as you want, completely free</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 QuickeyTools. All rights reserved.</p>
+    <div class="nav-links">
+      <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+      <a href="contact-us.html" class="nav-link">Contact Us</a>
+    </div>
+  </footer>
+</body>
+</html>
